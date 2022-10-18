@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "39fac5d2-784a-4a34-af7d-e0266f741f89",
+		"name": "Frameworks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10877400"
+	},
+	"item": [
+		{
+			"name": "Get Framework",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/12",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Frameworks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/all",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Framework",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{        \r\n        \"frameworkName\": \"Angular\",\r\n        \"version\": \"12\",\r\n        \"hypeLevel\": \"0\",\r\n        \"deprecationDate\": \"2025-07-31\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}",
+					"host": [
+						"{{baseUrl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Framework",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Framework",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"frameworkName\": \"Angular\",\r\n    \"version\": \"4\",\r\n    \"hypeLevel\": 2,\r\n    \"deprecationDate\": \"2022-10-11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/12",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update HypeLevel",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/hl/3?hypelevel=0",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"hl",
+						"3"
+					],
+					"query": [
+						{
+							"key": "hypelevel",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch DeprDate",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/dd/1?deprecationdate=2022-11-11",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"dd",
+						"1"
+					],
+					"query": [
+						{
+							"key": "deprecationdate",
+							"value": "2022-11-11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch HL DT",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/1?hypelevel=0&deprecationdate=2025-01-01",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"1"
+					],
+					"query": [
+						{
+							"key": "hypelevel",
+							"value": "0"
+						},
+						{
+							"key": "deprecationdate",
+							"value": "2025-01-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By String",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/searchstring?infix=ea",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"searchstring"
+					],
+					"query": [
+						{
+							"key": "infix",
+							"value": "ea"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By HL greater",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/searchhlgte?hypelevel=5",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"searchhlgte"
+					],
+					"query": [
+						{
+							"key": "hypelevel",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By HL less",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/searchhllte?hypelevel=9",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"searchhllte"
+					],
+					"query": [
+						{
+							"key": "hypelevel",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "localhost:8080/framework",
+			"type": "string"
+		}
+	]
+}
